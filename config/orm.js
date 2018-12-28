@@ -1,7 +1,7 @@
-//Import mySQL connection
+// import mySQL connection
 var connection = require("../config/connection.js");
 
-// Helper function for SQL syntax.
+// helper function for SQL syntax.
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -12,7 +12,7 @@ function printQuestionMarks(num) {
     return arr.toString();
 }
 
-// Helper function for SQL syntax.
+// helper function for SQL syntax.
 function objToSql(ob) {
     var arr = [];
 
@@ -25,11 +25,11 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// object for all our SQL statement functions.
 var orm = {
     selectAll: function (tableInput, cb) { //callback
 
-        // Construct the query string that returns all rows from the target table
+        // construct the query string that returns all rows from the target table
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
@@ -57,7 +57,7 @@ var orm = {
             cb(result);
         });
     },
-    // An example of objColVals would be {name: cat, sleepy: true}
+    // an example of objColVals would be {name: cat, sleepy: true}
     updateOne: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
@@ -77,5 +77,5 @@ var orm = {
     },
 };
 
-// Export the orm object for the model (cat.js).
+// export the orm object for the model
 module.exports = orm;
