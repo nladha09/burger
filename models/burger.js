@@ -17,7 +17,7 @@ var burger = {
 		});
 	},
 
-	//The objColVals is an object specifying columns as object keys with associated values
+	// the objColVals is an object specifying columns as object keys with associated values
 	updateOne: function (objColVals, condition, cb) {
 		orm.updateOne('burgers', objColVals, condition, function(res){
 			cb(res);
