@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: #FFDC92;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1em;
+	position: relative;
+}
+
+button.addBurgerButton {
+	position: absolute;
+	bottom: 8%;
+	left: 45%;
+	background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 10%;
+
+}
