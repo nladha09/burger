@@ -1,21 +1,19 @@
-// DEPENDENCIES // 
 var mysql = require('mysql');
-var app = express();
-var PORT = process.env.PORT || 3000;
+var connection;
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
+if (process.env.JAWSDB_URL) {
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
+}	else {
 	connection = mysql.createConnection({
 		port: 3306,
 		host: 'localhost',
 		user: 'root',
 		password: '',
 		database:'burgers_db'
-	});
+	});	
+}
 
-// Make connection.
+// connection
 connection.connect(function(err) {
 	if (err) {
 		console.error("error connecting: " + err.stack);
@@ -24,9 +22,8 @@ connection.connect(function(err) {
 	console.log("connected as id " + connection.threadId);
 });
 
-app.listen(process.env.PORT || 3000, function() {
-	console.log("App listening on PORT " + PORT);
-});
 
-// Export connection for our ORM to use.
+// connection.connect();
+
+// export connection for ORM use.
 module.exports = connection;
