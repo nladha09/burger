@@ -27,7 +27,7 @@ function objToSql(ob) {
 
 // object for all our SQL statement functions.
 var orm = {
-    selectAll: function (tableInput, cb) { //callback
+    selectAll: function (tableInput, cb) { 
 
         // construct the query string that returns all rows from the target table
         var queryString = "SELECT * FROM " + tableInput + ";";
