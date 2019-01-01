@@ -1,29 +1,26 @@
-var express = require("express");
-var bodyParser = require("body-parser");
+var express = require('express');
 var methodOverride = require('method-override');
-
-var app = express();
+var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 3000;
 
-// static content for the app from the "public" directory in the application directory
-app.use(express.static(process.cwd() + '/public'));
+var app = express();
 
-app.use(bodyParser.urlencoded({
-	extended: false}));
+app.use(express.static("public"));
 
-// override with POST having ?_method = DELETE
-app.use(methodOverride('_method'));
+app.use(bodyParser.urlencoded({extended: false}));
 
-// handlebars
-var exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({
-	defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+app.use(methodOverride("_method"));
 
 
-// routes
-var routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+	
+app.set("view engine", "handlebars");
+
+var routes = require("./controllers/burgers_controllers.js");
+
+app.use("/", routes);
 
 app.listen(port);

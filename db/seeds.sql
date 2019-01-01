@@ -1,4 +1,6 @@
-
-INSERT INTO burgers (burger_name, devoured) VALUES ('Black Bean Burger', FALSE);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Double Cheese Burger', FALSE);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Spicy Chicken Burger', FALSE);
+INSERT INTO burgers(burger_name, devoured)
+	values('Veggie Burger', false),
+    ('Double Cheese Burger', false),
+    ('Spicy Chicken Burger', false);
+    
+    select * from burgers;
