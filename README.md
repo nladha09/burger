@@ -9,6 +9,7 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 
 # Video Walkthrough
 
+{{ insert-video-link-here }}
 
 #### Directory structure
 
