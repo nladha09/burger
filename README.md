@@ -70,6 +70,6 @@ Files & Directories structure:
 
 
 #### A couple of things I could add for future development:
-1.) adding user validation - currently empty user input is accepted
-2.) creating a key.js / .env file to hide connection info (username & pw)
-3.) adding a video walkthrough / gif of deployed site
+1. adding user validation - currently empty user input is accepted
+2. creating a key.js / .env file to hide connection info (username & pw)
+3. adding a video walkthrough / gif of deployed site
