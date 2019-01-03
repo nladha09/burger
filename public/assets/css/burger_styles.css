@@ -1,7 +1,12 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    width: 100%;
-    background-color: orange;
+    color: whitesmoke;
+    background-image: url("../img/background.PNG");
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .center {
