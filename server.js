@@ -1,17 +1,16 @@
 var express = require('express');
 var methodOverride = require('method-override');
+// handles parsing incoming requests - grab form data
 var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 3000;
 
 var app = express();
 
-// serving static files in express
-// app.use(express.static("public"));
+// serving static files (html) in express
+app.use(express.static("public"));
 
-app.use(express.static(process.cwd() + '/public'));
-
-
+// body parser middleware - passing obj.extended false
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(methodOverride("_method"));
