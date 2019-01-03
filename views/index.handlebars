@@ -1,5 +1,7 @@
+{{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
+
 <h1>Eat-Da-Burger!</h1>
-<img src="../public/assets/img/burger.png" class="center" alt="burger">
+        <img src="assets/img/burger.png" alt="burger" class="center">
 <br>
 
 <div id='avail'>
@@ -11,7 +13,7 @@
 
             <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="false">
-                <button class="btn btn-warning" type="submit">Eat Me!</button>
+                <button class="btn btn-warning" type="submit">Devour it!</button>
             </form>
 
         </li>
@@ -19,7 +21,7 @@
     </ul>
 </div>
 <div id='devoured'>
-    <h2>Burgers That Have <br>Been Devoured: </h2>
+    <h2>Burgers Devoured: </h2>
 
     <ul>
         {{#each burgers}} {{#if this.devoured}}
@@ -30,7 +32,11 @@
     </ul>
 </div>
 
+
 <div id='add'>
+    <br>
+<br>
+
     <h2>Add a Burger: </h2>
     <form class="create-update-form" action="/" method="POST">
         <div class="form-group">

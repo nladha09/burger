@@ -6,9 +6,9 @@ body {
 
 .center {
     display: block;
-    margin-left: auto;
+    margin-left: 18%;
     margin-right: auto;
-    width: 50%;
+    width: 15%;
 }
 
 h1 {
@@ -35,5 +35,5 @@ li {
 
 #add {
     clear: both;
-    margin-left: 25%;
+    margin-left: 20%;
 }
