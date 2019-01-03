@@ -1,5 +1,7 @@
 var express = require('express');
+
 var methodOverride = require('method-override');
+
 // handles parsing incoming requests - grab form data
 var bodyParser = require('body-parser');
 
@@ -14,7 +16,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(methodOverride("_method"));
-
 
 var exphbs = require("express-handlebars");
 
