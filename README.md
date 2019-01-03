@@ -8,9 +8,9 @@ Eat-Da-Burger! is a restaurant app that lets users input the names of burgers th
 2. Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
 3. The app will store every burger in a database, whether devoured or not.
 
-# Video Walkthrough
+# Deployed via Heroku
 
-{{ insert-video-link-here }}
+[Eat-Da-Burger!](https://eat-da-burger-26516.herokuapp.com/)
 
 #### Directory structure
 
