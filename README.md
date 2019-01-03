@@ -52,7 +52,7 @@ Files & Directories structure:
         └── main.handlebars
 ```
 
-###Technologies Used
+#### Technologies Used
 
 * HTML
 * CSS
